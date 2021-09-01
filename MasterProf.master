@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterProf.master.cs" Inherits="MasterProf" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="images/logoatt.png" rel="icon"/>
+        <title>Online Attendance Management System</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <script src="js/jquery.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container-fluid">
+            
+        <!--- Header Start -------->
+        <div class="row header">
+
+            <div class="col-md-10">
+                    <h2 >Online Attendance Mangement System</h2>
+            </div>
+
+            <div class="col-md-2 " style="top: 25px;">
+            <span class="glyphicons glyphicons-power"><asp:Button ID="Button1" CssClass="form-control" runat="server" Text="LOGOUT" align="right" onclick="Button1_Click" BackColor="#337AB7" BorderColor="#337AB7" ForeColor="White" Font-Bold="true" Width="50%" />
+              <%--  <ul class="nav nav-pills ">
+                
+                 </ul>--%>
+                  
+               
+            </div>
+        </div>
+  <!--- Header Ends ---------> 
+
+  <div class="row">
+
+   <!----- Menu Area Start ------>
+        <div class="col-md-2 menucontent">
+          
+            <a href="#"><h1>Dashboard</h1></a>
+                
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation"><a href="attendance.aspx">Attendance</a></li>
+                  <li role="presentation"><a href="defaulter.aspx">Generate Defaulter</a></li>
+                  <li role="presentation"><a href="changePassword.aspx">Change Password</a></li>
+                </ul>
+        </div>
+        <!---- Menu Ares Ends  -------->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         </div>
+        <script src="js/bootstrap.min.js"></script>
+  <%--  <div align="right">
+    <asp:Button ID="Button1" runat="server" Text="LOGOUT" align="right" onclick="Button1_Click" /> 
+    </div>
+    <table>
+    <tr>
+    <td>
+    <a href="attendance.aspx">ATTENDANCE</a><br />
+    <a href="defaulter.aspx">GENERATE DEFAULTERS</a><br />
+    <a href="changePassword.aspx">CHANGE PASSWORD</a><br />
+    </td>
+    <td><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></td></tr>
+    </table>
+        <div>
+        
+    </div>--%>
+    </form>
+</body>
+</html>
